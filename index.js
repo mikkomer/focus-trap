@@ -139,7 +139,7 @@ function focusTrap(element, userOptions) {
   }
 
   function checkClick(e) {
-    if (config.clickOutsideDeactivates) return;
+    if (config.clickOutsideDeactivates || config.allowClicks) return;
     if (container.contains(e.target)) return;
     e.preventDefault();
     e.stopImmediatePropagation();
